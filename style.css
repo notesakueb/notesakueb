@@ -1,0 +1,274 @@
+:root {
+  --off: #f6f6f6;
+  --pure: #fff;
+  --green: #079707;
+  --light-green: #07970763;
+  --whatsapp: #25D366;
+  --blue: #138fd6;
+  --light-blue: #138ed663;
+  --yellow: #ce910f;
+  --light-yellow: #ce920f9f;
+  --red: #ff0000;
+  --light-red: #ff00009f;
+  --gmail: #c71610;
+  --icon: #000000af;
+  --shadow: #523f691f;
+}
+body {
+    margin: 0px;
+    background-color: var(--off);
+  }
+/*-------------------- header elements --------------------*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: var(--pure);
+    z-index: 1;
+  }
+  .title {
+    font-size: 35px;
+    margin-left: 20px;
+    font-family: "josefin sans";
+    font-weight: 650;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .nav {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact {
+    color: var(--icon);
+    margin-right: 10px;
+    align-self: center;
+    font-size: 24px;
+    border-radius: 46px;
+    height: 46px;
+    width: 46px;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 13px;
+    border-radius: 25px;
+    background-color: var(--pure);
+    box-shadow: 0px 1px 5px var(--shadow);
+  }
+  .fa-whatsapp {
+    color: var(--whatsapp);
+    font-size: 32px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right:7px;
+    padding-left: 7px;
+  }
+  .fa-at {
+    font-size: 28px;
+    color: var(--gmail);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right:7px;
+    padding-left: 7px;
+  }
+  /*----------------------- laptop display --------------------------*/
+  .sidebar {
+    position: fixed;
+    background-color: var(--pure);
+    width: 250px;
+    height: 100vh;
+  }
+  .content {
+    position: absolute;
+    left: 250px;
+    background-color: var(--blue);
+  }
+  /*------------------------- phone display ------------------------*/
+  .phonedisp {
+    font-family: "lexend deca";
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  .paragraph {
+    font-size: 15px;
+  }
+  .select {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .btn {
+    height: 60px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    font-size: 22px;
+    font-weight: 650;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--pure);
+    font-family: "josefin sans";
+    cursor: pointer;
+    border: 1px solid var(--shadow) ;
+  }
+  .button1 {
+    top: 140px;
+    color: var(--red);
+  }
+  .button2 {
+    top: 210px;
+    color: var(--yellow);
+  }
+  .button3 {
+    top: 280px;
+    color: var(--green);
+  }
+  .button4 {
+    top: 350px;
+    color: var(--blue);
+  }
+  /*------------------------- functions ----------------------------*/
+  .btn:hover {
+    border-top: none;
+    box-shadow: 0px 3px 5px var(--shadow);
+    transform: scale(1.03);
+    transition: 300ms;
+  }
+  .contact:hover {
+    background-color: var(--shadow);
+  }
+  .fa-whatsapp:hover {
+    background-color: var(--off);
+  }
+  .fa-at:hover {
+    background-color: var(--off);
+  }
+  @keyframes fadeout {
+    0%{opacity: 1;}
+    100%{opacity: 0;};
+  }
+  /*--------------------------- laptop display ------------------------*/
+  @media only screen and (min-width: 801px) {
+    .phonedisp {
+      display: none;
+    }
+    header {
+      border-bottom: 3px solid var(--off);
+    }
+  }
+  /*-------------------------- phone display -------------------------*/
+  @media only screen and (max-width: 800px) {
+    .laptopdisp {
+      display: none;
+    }
+    .title {
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+    .contact {
+      font-size: 22;
+      height: 40px;
+      width: 40px;
+    }
+    .menu {
+      top: 55px;
+      right: 11px;
+    }
+    .fa-whatsapp {
+      font-size: 30px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      padding-right:7px;
+      padding-left: 7px;
+    }
+    .fa-at {
+      font-size: 26px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      padding-right:7px;
+      padding-left: 7px;
+    }
+  }
+/*  @media only screen and (max-width: 700px) and (orientation: portrait) {
+    #prepEB {
+      font-size: 35px;
+    }
+    #nav {
+      top: -8px;
+      height: 34px;
+      width: 42px;
+    }
+    #title {
+      font-size: 15px;
+    }
+    #button1 {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #buttonmail {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #buttonxi {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #buttonxii {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #button1:active {
+      box-shadow: 2px 2px 5px rgba(82, 63, 105, 0.2);
+      padding-top: 17px;
+      padding-bottom: 12px;
+      width: 242px;
+      transition: 300ms;
+    }
+    #buttonmail:active {
+      box-shadow: 2px 2px 5px rgba(82, 63, 105, 0.2);
+      padding-top: 17px;
+      padding-bottom: 12px;
+      width: 242px;
+      transition: 300ms;
+    }
+    #buttonxi:active {
+      box-shadow: 2px 2px 5px rgba(82, 63, 105, 0.2);
+      padding-top: 17px;
+      padding-bottom: 12px;
+      width: 242px;
+      transition: 300ms;
+    }
+    #buttonxii:active {
+      box-shadow: 2px 2px 5px rgba(82, 63, 105, 0.2);
+      padding-top: 17px;
+      padding-bottom: 12px;
+      width: 242px;
+      transition: 300ms;
+    }
+    #button2 {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    #button2:active {
+      box-shadow: 2px 2px 5px rgba(82, 63, 105, 0.2);
+      padding-top: 17px;
+      padding-bottom: 12px;
+      width: 242px;
+      transition: 300ms;
+    }
+    main {
+      padding-top: 30px;
+    }
+  }
+  @media only screen and (max-width: 700px) and (orientation: landscape) {
+  }

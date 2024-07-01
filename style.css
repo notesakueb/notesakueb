@@ -34,6 +34,7 @@ body {
     font-weight: 650;
     padding-top: 20px;
     padding-bottom: 10px;
+    margin-top: 10px;
   }
   .nav {
     cursor: pointer;
@@ -80,7 +81,7 @@ body {
   .sidebar {
     position: fixed;
     background-color: var(--pure);
-    width: 250px;
+    width: 50px;
     height: 100vh;
   }
   .content {
@@ -104,7 +105,7 @@ body {
   }
   .btn {
     height: 60px;
-    width: 350px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,11 +160,11 @@ body {
   }
   /*--------------------------- laptop display ------------------------*/
   @media only screen and (min-width: 801px) {
-    .phonedisp {
-      display: none;
-    }
     header {
       border-bottom: 3px solid var(--off);
+    }
+    .laptopdisp {
+      display: none;
     }
   }
   /*-------------------------- phone display -------------------------*/

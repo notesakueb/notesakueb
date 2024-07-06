@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     position: sticky;
     top: 0px;
-    background: linear-gradient(165.23deg,var(--light-green) 60%,var(--off) 55%);
+    background: linear-gradient(165deg,var(--light-green) 50%,var(--off) 90%);
     z-index: 1;
   }
   .title {
